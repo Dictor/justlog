@@ -11,7 +11,7 @@ import (
 )
 ```
 
-**Main code**
+**Main code** : Put in front of your main function
 ```
 log_path := justlog.MustPath(justlog.SetPath())
 defer (justlog.MustStream(justlog.SetStream(log_path))).Close()
