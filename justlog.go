@@ -8,9 +8,11 @@ import (
 	"time"
 )
 
+var ExePath string
+
 func SetPath() (string, error) {
-	var path string
 	path, err := osext.ExecutableFolder()
+	ExePath = path
 	path += "/log"
 	prepareDirectory(path)
 	return path, err
